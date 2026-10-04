@@ -1,0 +1,44 @@
+{
+  "name": "room-planner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Photo-to-3D room planner: estimate a room from photos, place shapes, find real products online and drop them in at true scale.",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:api": "tsx watch server/index.ts",
+    "dev:web": "vite",
+    "start": "node scripts/dev.mjs preview",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "deploy:local": "npm run build && node scripts/deploy-local.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.288",
+    "@anthropic-ai/sdk": "^0.131.0",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "three": "^0.186.1",
+    "zod": "^4.6.5",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  }
+}

@@ -1,0 +1,167 @@
+/* Design versions drawer (src/ui/VersionsPanel.tsx). Rendered into <body> so it floats above the 3D view chips. */
+.versions-btn-open {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.versions-count {
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 18px;
+  text-align: center;
+}
+/* The "Versions" text stays down to ~1100 px (Export / Import give up their text first, see styles.css). */
+@media (max-width: 1100px) {
+  .versions-label {
+    display: none;
+  }
+}
+.versions-group {
+  list-style: none;
+  padding: 10px 16px 2px;
+}
+.versions-btn-open .versions-count {
+  background: var(--panel);
+}
+
+.versions-panel {
+  position: fixed;
+  z-index: 60;
+  top: calc(var(--toolbar-h) + 8px);
+  right: 12px;
+  width: 384px;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - var(--toolbar-h) - 20px);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  white-space: normal;
+}
+.versions-head {
+  flex: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 14px 12px 10px 16px;
+}
+.versions-title {
+  font-size: 15px;
+  font-weight: 650;
+}
+.versions-save {
+  flex: none;
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.versions-save .input {
+  flex: 1;
+  min-width: 0;
+}
+.versions-msg {
+  flex: none;
+  margin: 10px 16px 0;
+}
+.versions-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+  margin: 0;
+  padding: 6px 8px;
+}
+.version-row {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+}
+.version-row:hover {
+  background: var(--panel-2);
+}
+.version-current {
+  background: var(--accent-soft);
+}
+.version-current:hover {
+  background: var(--accent-soft);
+}
+.version-thumb {
+  flex: none;
+  width: 84px;
+  height: 56px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  background: var(--panel-2);
+}
+.version-thumb-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+.version-body {
+  flex: 1;
+  min-width: 0;
+}
+.version-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.version-badge {
+  flex: none;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 550;
+  line-height: 16px;
+}
+.version-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+.version-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-top: 6px;
+}
+.version-actions .btn-sm {
+  height: 26px;
+  padding: 0 7px;
+  font-size: 12.5px;
+}
+.versions-empty {
+  padding: 12px 8px;
+}
+.versions-foot {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--border);
+}
+.input.input-sm {
+  height: 28px;
+  padding: 0 8px;
+}
