@@ -10,7 +10,7 @@ room before adding it at true scale.
 **Stack:** React 19 · three.js (@react-three/fiber + drei) · zustand · TypeScript · Vite · Express 5 ·
 Claude API / Claude Agent SDK · Vitest · Playwright
 
-![Room overview](docs/screenshots/overview.png)
+![Chatting with the planner: resizing furniture to match a real bedroom, then putting a cat on the cat tower](docs/screenshots/chat-hero.png)
 
 | Room from a photo | Product search results | Product placed |
 |---|---|---|
@@ -355,7 +355,7 @@ Shortcuts are ignored while typing in a field.
 
 ![Live session: bin under the desk, cat on the tower's middle level, evening with blinds closed](docs/screenshots/live-round3.png)
 
-More screenshots in [`docs/screenshots/`](docs/screenshots/): [top view](docs/screenshots/top-view.png),
+More screenshots in [`docs/screenshots/`](docs/screenshots/): [room overview](docs/screenshots/overview.png), [top view](docs/screenshots/top-view.png),
 [eye-level view](docs/screenshots/eye-view.png), [corner preview](docs/screenshots/corner-preview.png),
 [compare in place](docs/screenshots/compare-in-place.png).
 
